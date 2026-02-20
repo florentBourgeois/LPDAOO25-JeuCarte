@@ -1,0 +1,24 @@
+<div class="game_ctn">
+  <h2>{{game.name | uppercase}} Details</h2>
+  <div *ngIf="game.isOver; else gameInProgress">
+    <h3 class="gameOver">Game Over</h3>
+    <p>Score: {{game.score}}</p>
+  </div>
+
+  <ng-template #gameInProgress>
+    <h3>Partie en cours : {{game.numberWonCard}} / {{game.cardsNumber-1}} cartes passées</h3>
+    <p>Score: {{game.score}}</p>
+    <p></p>
+
+    <div class="card-display">
+      <div>
+        <h3>Talon</h3>
+        <app-card-detail [card]="game.referenceCard"></app-card-detail>
+      </div>
+      <div>
+        <h3>Carte en main</h3>
+        <app-card-detail [card]="game.hand" [isHand]="true" (shapeSelected)="playShape($event)"></app-card-detail>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,12 @@
+﻿version: '3.1'
+
+services:
+
+
+    sobble-front:
+        container_name: sobble-front
+        build:
+            context: ./front_sobble
+            dockerfile: Dockerfile
+        ports:
+            - ${FRONT_PORT}:80

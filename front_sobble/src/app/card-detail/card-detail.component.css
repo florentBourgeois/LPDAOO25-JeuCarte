@@ -1,0 +1,54 @@
+.card{
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  background: white;
+  border: 1px solid black;
+  width: 300px;
+  padding: 5px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.circle{
+  width : 60px;
+  height : 60px;
+  -moz-border-radius : 50%;
+  -webkit-border-radius : 50%;
+  border-radius : 50%;
+  margin: auto;
+}
+
+.rectangle{
+  width  : 70px;
+  height : 40px;
+  margin: auto;
+}
+
+.square{
+  width  : 70px;
+  height : 70px;
+  margin: auto;
+}
+
+.triangle{
+  width: 60px;
+  height: 60px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin: auto;
+}
+
+
+.hexagon {
+  background: red;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.pentagon {
+  position: relative;
+  width: 85px;
+  height: 82px;
+  background: #4169e1;
+  clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}

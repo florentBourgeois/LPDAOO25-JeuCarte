@@ -1,0 +1,22 @@
+<h2>Jeux</h2>
+
+<select #shapesPerCardInput>
+  <option value="3">real easy - 3 cartes</option>
+  <option value="4">easy - 4 cartes</option>
+  <option value="6">medium - 6 cartes</option>
+  <option value="8">complete - 8 cartes</option>
+</select>
+
+<button class="create-game-button" (click)="createNewGame(Number(shapesPerCardInput.value))">+</button>
+
+
+
+<ul >
+  <li class="games" *ngFor="let game of gameList; index as i;">
+    <app-game-detail [game]="game" (click)="onSelect(game)" [class.selected]="game === selectedGameForList"></app-game-detail>
+  </li>
+</ul>
+
+
+<app-play-ground *ngIf="selectedGame" [game]="selectedGame"></app-play-ground>
+

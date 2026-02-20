@@ -1,0 +1,8 @@
+<div class="card" [style.background-color]="isHand?'white':'#f4f4f4'" [style.box-shadow]="isHand?'':'12px 11px 5px 9px black'">
+  <div *ngFor="let shape of card.shapes"
+       class="" [className]="shape.type.toLowerCase()"
+       [style.background-color]="shape.color"
+       [style.cursor]="isHand?'pointer':'auto'"
+       (click)="onShapeClick(shape.id)">
+  </div>
+</div>
